@@ -1,49 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba Inicial Diseño</title>
-    <link href="/css/css.css">
+    <title>Mariscos Recio</title>
+    <link rel="stylesheet" href="../css/css.css">
 </head>
 
-    <body>
+<body>
 
-        <div class = main-container>
+    <div class="main-container">
 
-            <div class = header, id = "header">    
+        <div class="header" id="header">
 
+            <img src="../images/Mariscos-Recio-parche.jpg" width="120" alt="Logo Mariscos Recio">
 
-                <h2>Bienvenido a Mariscos Recio</h2>  
+            <h1>Bienvenido a Mariscos Recio</h1>
 
-                <p>¡El mar al mejor precio!</p>
+            <p>El mar al mejor precio!</p>
 
-                <img href ="/images/Mariscos-Recio-parche.jpg" height="40",width=40 alt="Logo Mariscos Recio">
+        </div>
 
-            </div class = header>  
-        
-                <div class = "Productos">
-                    
-                    <h2>Nuestros productos y ofertas</h2>
+        <nav class="menu">
+            <a href="#productos">Productos</a>
+            <a href="#nosotros">Sobre nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a href="https://www.google.com/maps" target="_blank">Donde estamos</a>
+        </nav>
 
-                    <p>Si quiere una cena de gala...</p>
-                
-                    <p>Si quiere una cena muy fina...</p>
+        <div class="contenido">
 
-                    <p></p>
+            <div class="seccion" id="productos">
 
+                <h2>Nuestros productos y ofertas</h2>
+
+                <p>Marisco fresco todos los dias, directo de la lonja a su mesa.</p>
+
+                <div class="producto">
+                    <h3>Gambas blancas</h3>
+                    <p>Si quiere una cena de gala... gamba blanca de Huelva.</p>
+                    <p class="precio">24,00 euros / kg</p>
                 </div>
 
+                <div class="producto">
+                    <h3>Langostinos cocidos</h3>
+                    <p>Si quiere una cena muy fina... langostino cocido en su punto de sal.</p>
+                    <p class="precio">18,50 euros / kg</p>
+                </div>
 
-                    <div class =footer, id = footer>
+                <div class="producto">
+                    <h3>Almejas y coquinas</h3>
+                    <p>Para un buen arroz o unas coquinas al ajillo de toda la vida.</p>
+                    <p class="precio">15,00 euros / kg</p>
+                </div>
 
-                        <footer>Todos los derechos reservados 2026&copy</footer>
+                <div class="producto">
+                    <h3>Bogavante</h3>
+                    <p>Nuestra oferta de la semana, solo por encargo.</p>
+                    <p class="precio">32,00 euros / kg</p>
+                </div>
 
-                    </div>
+            </div>
 
-        
-        </div >
+            <div class="seccion" id="nosotros">
 
-    </body>
+                <h2>Sobre nosotros</h2>
+
+                <p>Mariscos Recio es un negocio familiar con mas de veinte anos
+                   vendiendo marisco fresco. Compramos cada manana en la lonja y lo
+                   tenemos en el mostrador el mismo dia.</p>
+
+                <ul>
+                    <li>Producto fresco del dia</li>
+                    <li>Envio a domicilio en 24 horas</li>
+                    <li>Encargos para bodas y celebraciones</li>
+                </ul>
+
+            </div>
+
+            <div class="seccion" id="contacto">
+
+                <h2>Haz tu pedido</h2>
+
+                <p>Rellena el formulario y te llamamos para confirmar el pedido.</p>
+
+                <form name="formPedido" id="formPedido" action="#" method="post">
+
+                    <label for="nombre">Nombre y apellidos:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Juan Perez">
+
+                    <label for="email">Correo electronico:</label>
+                    <input type="email" id="email" name="email" placeholder="correo@ejemplo.com">
+
+                    <label for="telefono">Telefono:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="600 00 00 00">
+
+                    <label for="producto">Producto:</label>
+                    <select id="producto" name="producto">
+                        <option value="gambas">Gambas blancas</option>
+                        <option value="langostinos">Langostinos cocidos</option>
+                        <option value="almejas">Almejas y coquinas</option>
+                        <option value="bogavante">Bogavante</option>
+                    </select>
+
+                    <label for="cantidad">Cantidad (kg):</label>
+                    <input type="number" id="cantidad" name="cantidad" min="1" max="20" value="1">
+
+                    <label for="comentario">Comentarios:</label>
+                    <textarea id="comentario" name="comentario" rows="4"></textarea>
+
+                    <p>
+                        <input type="checkbox" id="aviso" name="aviso">
+                        <label for="aviso">Acepto el aviso legal</label>
+                    </p>
+
+                    <input type="submit" value="Enviar pedido">
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="footer" id="footer">
+
+            <footer>
+                <p>Mariscos Recio - Todos los derechos reservados 2026 (c)</p>
+                <p>Telefono: 954 00 00 00 - <a href="mailto:pedidos@mariscosrecio.es">pedidos@mariscosrecio.es</a></p>
+                <p><a href="#header">Volver arriba</a></p>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <script src="../js/fomulario.js"></script>
+
+</body>
 
 </html>
